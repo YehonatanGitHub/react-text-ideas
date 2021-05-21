@@ -1,40 +1,22 @@
-const quotes = [
-  {
-    id: 1,
-    text: 'Give me a fish and I eat for a day. Teach me to fish and I eat for a lifetime.',
-    genre: 'Ancient Chinese',
-    by: '',
-    favorite: true,
-  },
-  {
-    id: 2,
-    text: "Life is what happens when you're busy making other plans.",
-    genre: 'Life',
-    by: 'John Lennon',
-    favorite: false,
-  },
-  {
-    id: 3,
-    text: 'Whoever is happy will make others happy too.',
-    genre: 'Happiness',
-    by: 'SiAnne Frankngers',
-    favorite: true,
-  },
-  {
-    id: 4,
-    text: 'The purpose of our lives is to be happy.',
-    genre: 'Happiness',
-    by: 'Dalai Lama',
-    favorite: true,
-  },
-]
-const Quotes = () => {
+import Accordion from 'react-bootstrap/Accordion'
+import Card from 'react-bootstrap/Card'
+import whatsapp from './whatsapp.png'
+
+const Quotes = ({ card }) => {
   return (
-    <>
-      {quotes.map((quote) => (
-        <h3>{quote.text}</h3>
-      ))}
-    </>
+    <Accordion.Collapse eventKey='1'>
+      <Card.Body>
+        {card.content}
+        <a
+          href='https://web.whatsapp.com/send?text= הי, אני השארתי פרטים, מה איתך? '
+          class='ns_btn'
+          data-action='share/whatsapp/share'
+          target='_blank'
+          rel='noreferrer'>
+          <img src={whatsapp} width='50' height='50' alt='whatsapp-icon' />
+        </a>
+      </Card.Body>
+    </Accordion.Collapse>
   )
 }
 
