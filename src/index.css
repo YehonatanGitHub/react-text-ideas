@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-
+/* 
 .container {
   max-width: 400px;
   margin: 30px auto;
@@ -18,19 +18,76 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
-}
-
+} */
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  background-color: #3c3c3c;
+}
+.header h1 {
+  color: #eee;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.accordion {
+  width: 100%;
+  max-width: 768;
+  margin: 0 auto;
+  padding: 4px;
+  justify-content: center;
+  align-content: center;
+}
+.accordion .categorys {
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.accordion .categorys .category-name {
+  position: relative;
+  font-size: 20px;
+  padding-right: 40px;
+}
+.accordion .categorys .category-name::after {
+  content: '';
+  position: absolute;
+  top: 14%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+  background-image: url('./iconfinder_arrow_icon.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease;
+}
+.accordion .categorys .quote {
+  font-size: 16px;
+  /* margin: 7px 0; */
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease;
+}
+.accordion .categorys .quote a {
+  float: right;
+  margin-top: -27px;
+}
+.quote .quote-content {
+  font-style: italic;
 }
 .footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 130%;
 }
 .btn {
   display: inline-block;
@@ -59,18 +116,19 @@ body {
   width: 100%;
 }
 
-.task {
+/* 
+.categorys {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.task.reminder {
+.categorys.reminder {
   border-left: 5px solid green;
 }
 
-.task h3 {
+.categorys h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
