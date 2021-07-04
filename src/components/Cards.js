@@ -9,16 +9,14 @@ const Cards = ({ card, index, toggleCards }) => {
   // }
 
   return (
-    <div className='accordion' key={index}>
-      <div
-        className={'categorys ' + (card.open ? 'open' : '')}
-        key={index}
-        onClick={() => toggleCards(index)}>
-        <div className='category-name'>{card.category}</div>
-        {card.cards.map((quote, i) => (
-          <Quotes quotes={quote} i={i} />
-        ))}
-      </div>
+    <div
+      className={'categorys ' + (card.open ? 'open' : '')}
+      key={index}
+      onClick={() => toggleCards(index)}>
+      <div className='category-name'>{card.category}</div>
+      {card.cards.map((quote, i) => (
+        <Quotes quotes={quote} i={i} />
+      ))}
     </div>
   )
 }

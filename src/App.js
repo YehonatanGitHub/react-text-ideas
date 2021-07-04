@@ -1,7 +1,9 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Cards from './components/Cards'
+import addQuote from './components/AddQuote'
 import { useState } from 'react'
+import AddQuote from './components/AddQuote'
 
 function App() {
   const [data, setData] = useState([
@@ -69,12 +71,15 @@ function App() {
   }
 
   return (
-    <div className='home'>
-      <Header title='Text Great Ideas' />
-      {data.map((card, i) => (
-        <Cards card={card} index={i} toggleCards={toggleCards} />
-      ))}
-      <Footer title='Have Great Ideas?' />
+    <div className='container'>
+      <Header title='Text Great Quotes' />
+      <AddQuote />
+      <div className='accordion'>
+        {data.map((card, i) => (
+          <Cards card={card} index={i} toggleCards={toggleCards} />
+        ))}
+        <Footer title='Have Great Ideas?' />
+      </div>
     </div>
   )
 }

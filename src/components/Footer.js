@@ -7,7 +7,7 @@ const Footer = ({ title }) => {
 
   return (
     <footer className='footer'>
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <Button color='green' text='Add One' onClick={onClick} />
     </footer>
   )

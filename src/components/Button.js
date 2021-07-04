@@ -5,5 +5,7 @@ const Button = ({ color, text, onClick }) => {
     </button>
   )
 }
-
+Button.defultProps = {
+  color: 'steelblue',
+}
 export default Button

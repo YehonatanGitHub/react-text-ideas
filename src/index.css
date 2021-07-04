@@ -9,16 +9,16 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
-/* 
+
 .container {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 30px auto;
   overflow: auto;
   min-height: 600px;
-  border: 1px solid steelblue;
+  /* border: 1px solid steelblue; */
   padding: 30px;
   border-radius: 5px;
-} */
+}
 .header {
   display: flex;
   justify-content: center;
@@ -39,6 +39,7 @@ body {
   padding: 4px;
   justify-content: center;
   align-content: center;
+  max-width: 1200px;
 }
 .accordion .categorys {
   margin: 15px;
@@ -51,13 +52,16 @@ body {
   position: relative;
   font-size: 20px;
   padding-right: 40px;
+  transition: all 0.6s;
+}
+.accordion .categorys.open .category-name {
+  margin-bottom: 15px;
 }
 .accordion .categorys .category-name::after {
   content: '';
   position: absolute;
   top: 14%;
   right: 0px;
-  transform: translateY(-50%);
   width: 30px;
   height: 30px;
   transform: rotate(180deg);
@@ -65,7 +69,10 @@ body {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: all 0.4s ease;
+  transition: all 0.6s;
+}
+.accordion .categorys.open .category-name::after {
+  transform: rotate(0deg);
 }
 .accordion .categorys .quote {
   font-size: 16px;
@@ -75,7 +82,7 @@ body {
   opacity: 0;
   max-height: 0;
   overflow-y: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.6s;
 }
 .accordion .categorys .quote a {
   float: right;
@@ -84,10 +91,18 @@ body {
 .quote .quote-content {
   font-style: italic;
 }
+.accordion .categorys.open .quote {
+  opacity: 1;
+  max-height: 1000px;
+}
 .footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 16px;
+}
+.footer button.btn {
+  font-weight: 600;
 }
 .btn {
   display: inline-block;
@@ -116,7 +131,6 @@ body {
   width: 100%;
 }
 
-/* 
 .categorys {
   background: #f4f4f4;
   margin: 5px;
@@ -139,7 +153,9 @@ body {
 }
 
 .form-control {
-  margin: 20px 0;
+  margin: 48px 0;
+  border: none !important;
+  background-color: none !important;
 }
 
 .form-control label {
