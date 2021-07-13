@@ -65,7 +65,6 @@ function App() {
   // Add Quote
   const AddToQuote = (quote) => {
     const id = Math.floor(Math.random() * 10000) + 1
-    const newQuote = { id, ...quote }
   }
 
   const toggleCards = (index) => {

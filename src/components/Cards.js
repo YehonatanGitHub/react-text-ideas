@@ -1,5 +1,5 @@
 import Quotes from './Quotes'
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 const Cards = ({ card, index, toggleCards }) => {
   // const [count, setCount] = useState(1)
