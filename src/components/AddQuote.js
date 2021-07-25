@@ -50,7 +50,7 @@ const AddQuote = ({ onAdd }) => {
           value={category}
           onChange={(e) => setCategory(e.target.value)}>
           <option className='category'></option>
-          <option className='category' value='famous-quotes'>
+          <option className='category' value='famous_quotes'>
             Famous Quotes
           </option>
           <option className='category' value='technology'>
