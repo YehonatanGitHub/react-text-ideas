@@ -15,7 +15,7 @@ const Cards = ({ card, index, toggleCards }) => {
       onClick={() => toggleCards(index)}>
       <div className='category-name'>{card.category}</div>
       {card.cards.map((quote, i) => (
-        <Quotes quotes={quote} key={i} />
+        <Quotes quotes={quote} i={i} />
       ))}
     </div>
   )

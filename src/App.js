@@ -156,7 +156,7 @@ function App() {
       <AddQuote onAdd={AddToQuotes} />
       <div className='accordion'>
         {data.map((card, i) => (
-          <Cards card={card} key={i} toggleCards={toggleCards} />
+          <Cards card={card} index={i} toggleCards={toggleCards} />
         ))}
       </div>
     </div>
