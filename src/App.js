@@ -5,6 +5,7 @@ import { useState } from 'react'
 import AddQuote from './components/AddQuote'
 
 function App() {
+  const [showAddQuote, setShowAddQuote] = useState(false)
   const [data, setData] = useState([
     {
       category: 'famous_quotes',
@@ -69,7 +70,6 @@ function App() {
 
   // Add Quote
   const AddToQuotes = (quote) => {
-    // const id = Math.floor(Math.random() * 10000) + 1
     let theData = [...data]
     let theQuote = { ...quote }
     console.log(theData)
@@ -86,55 +86,15 @@ function App() {
     console.log(newQute)
     console.log('selectQuote')
     console.log(selectQuote)
-    // setData(
-    //   theData.map((x) => {
-    //     if (x.category !== selectQuote) return x
-    //     return { ...x, cards: [...x.cards, newQute] }
-    //   })
-    // )
 
     let newData = theData.map((column) => {
       if (column.category !== selectQuote) return column
       return { ...column, cards: [...column.cards, newQute] }
     })
-    let newData2 = [...data]
-    console.log('newData2')
-    console.log(newData2)
     console.log('newData')
     console.log(newData)
-    setData([...data, newData])
-    let newData3 = [...data]
-    console.log('newData3')
-    console.log(newData3)
-    // const theData2 = [...data]
-    // console.log(theData2)
-    // const stuff = selected.filter(b => b)[0].sub this.setState({foo: stuff})
+    setData(newData)
   }
-
-  // const AddToQuotes = (quote) => {
-  //   const id = Math.floor(Math.random() * 10000) + 1
-  //   const newQuote = { ...quote }
-
-  //   const newContent = newQuote.content
-  //   const newAuthor = newQuote.author
-  //   const newQuoteToAdd = { id, newAuthor, newContent }
-  //   console.log(newQuoteToAdd)
-  //   // setData([...data, cards: newQuote)
-
-  //   setData((prevState) => {
-  //     return { ...prevState, cards: newQuote }
-  //   })
-
-  //   // const stuff = selected.filter(b => b)[0].sub this.setState({foo: stuff})
-  // }
-
-  // const newData = theData.map((column) => {
-  //   if (column.category !== theQuote.category) return column
-  //   return { ...column, cards: [...column.cards, { newQute }] }
-  // })
-  // setData([...data, newData])
-  // const theData2 = [...data]
-  // console.log(theData2)
 
   const toggleCards = (index) => {
     setData(
@@ -151,12 +111,15 @@ function App() {
 
   return (
     <div className='container'>
-      <Header title='Share Great Quotes' />
-      <Footer title='Have Great Ideas?' />
-      <AddQuote onAdd={AddToQuotes} />
+      <Header
+        onAdd={() => setShowAddQuote(!showAddQuote)}
+        title='Share Great Quotes'
+        showAdd={showAddQuote}
+      />
+      {showAddQuote && <AddQuote onAdd={AddToQuotes} />}
       <div className='accordion'>
         {data.map((card, i) => (
-          <Cards card={card} index={i} toggleCards={toggleCards} />
+          <Cards card={card} index={i} key={i} toggleCards={toggleCards} />
         ))}
       </div>
     </div>

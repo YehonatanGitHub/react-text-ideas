@@ -27,12 +27,24 @@ body {
   background-color: #3c3c3c;
   max-width: 1180px;
   margin: 0 auto;
+  color: white;
+  font-size: 3rem;
 }
 .header h1 {
   color: #eee;
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.add-quote {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 10px;
+}
+.add-quote p {
+  font-size: 20px;
+  margin: 8px;
 }
 .accordion,
 .add-form {
@@ -96,6 +108,9 @@ body {
 .accordion .categorys.open .quote {
   opacity: 1;
   max-height: 1000px;
+}
+.category {
+  padding: 10px !important;
 }
 .footer {
   display: flex;
