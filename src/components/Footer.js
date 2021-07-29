@@ -1,14 +1,16 @@
 import Button from './Button'
 
-const Footer = ({ title }) => {
-  const onClick = ({ title }) => {
-    console.log('clicked')
-  }
-
+const Footer = ({ title, onAdd, showAdd }) => {
   return (
     <footer className='footer'>
-      <h4>{title}</h4>
-      <Button color='green' text='Add One' onClick={onClick} />
+      <div className='add-quote'>
+        <p>Have A Great Quote?</p>
+        <Button
+          color={showAdd ? 'red' : 'green'}
+          text={showAdd ? 'Close' : 'Add One'}
+          onClick={onAdd}
+        />
+      </div>
     </footer>
   )
 }

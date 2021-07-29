@@ -6,7 +6,13 @@ const Quotes = ({ quotes, i }) => {
       <div className='quote-content'>"{quotes.content}"</div>
       <div className='quote-author'>- {quotes.author} -</div>
       <a
-        href={'https://web.whatsapp.com/send?text=' + quotes.content + ' - ' + quotes.author}
+        href={
+          'https://web.whatsapp.com/send?text=' +
+          quotes.content +
+          ' - ' +
+          quotes.author +
+          ' - sent from www.ShareGreatQuotes.com'
+        }
         className='ns_btn'
         data-action='share/whatsapp/share'
         target='_blank'

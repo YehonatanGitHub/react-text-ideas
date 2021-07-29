@@ -43,28 +43,30 @@ const AddQuote = ({ onAdd }) => {
         />
       </div>
       <div className='form-control form-control-check'>
-        <label>Set Category</label>
+        <label>Select Category</label>
         <select
           className='category'
           name='category'
           value={category}
           onChange={(e) => setCategory(e.target.value)}>
           <option className='category'></option>
-          <option className='category' value='famous_quotes'>
-            Famous Quotes
+          <option className='category' value='Inspirational'>
+            Inspirational
           </option>
-          <option className='category' value='technology'>
-            Technology
+          <option className='category' value='Love'>
+            Love
           </option>
-          <option className='category' value='inspiration'>
-            Inspiration
+          <option className='category' value='Chinese Proverbs'>
+            Chinese Proverbs
           </option>
-          <option className='category' value='morals'>
-            Morals
+          <option className='category' value='Bible'>
+            Bible
           </option>
         </select>
       </div>
-      <input type='submit' value='Save Quote' className='btn btn-block' />
+      <div>
+        <input id='submit-btn' type='submit' value='Save Quote' className='btn btn-block' />
+      </div>
     </form>
   )
 }
