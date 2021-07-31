@@ -1,5 +1,3 @@
-import Button from './Button'
-
 const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header>
