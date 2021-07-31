@@ -1,5 +1,5 @@
 import Quotes from './Quotes'
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
 const Cards = ({ card, index, toggleCards }) => {
   // const [count, setCount] = useState(1)
@@ -15,7 +15,7 @@ const Cards = ({ card, index, toggleCards }) => {
       onClick={() => toggleCards(index)}>
       <div className='category-name'>{card.category}</div>
       {card.cards.map((quote, i) => (
-        <Quotes quotes={quote} i={i} />
+        <Quotes quotes={quote} i={i} key={i} />
       ))}
     </div>
   )
