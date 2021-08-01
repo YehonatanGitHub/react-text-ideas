@@ -7,6 +7,20 @@ const Quotes = ({ quotes, i }) => {
       <div className='quote-author'>- {quotes.author} -</div>
       <a
         href={
+          'whatsapp://send?text=' +
+          quotes.content +
+          ' - ' +
+          quotes.author +
+          ' - sent from www.ShareGreatQuotes.com'
+        }
+        className='ns_btn'
+        data-action='share/whatsapp/share'
+        target='_blank'
+        rel='noreferrer'>
+        <img src={whatsapp} width='35' height='35' alt='whatsapp-icon' />
+      </a>
+      <a
+        href={
           'https://web.whatsapp.com/send?text=' +
           quotes.content +
           ' - ' +
