@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/react-text-ideas/static/css/main.7a49feb5.chunk.css",
-    "main.js": "/react-text-ideas/static/js/main.0617157c.chunk.js",
-    "main.js.map": "/react-text-ideas/static/js/main.0617157c.chunk.js.map",
-    "runtime-main.js": "/react-text-ideas/static/js/runtime-main.4e4e9a5f.js",
-    "runtime-main.js.map": "/react-text-ideas/static/js/runtime-main.4e4e9a5f.js.map",
+    "main.js": "/react-text-ideas/static/js/main.cf18c693.chunk.js",
+    "main.js.map": "/react-text-ideas/static/js/main.cf18c693.chunk.js.map",
+    "runtime-main.js": "/react-text-ideas/static/js/runtime-main.dd15cebb.js",
+    "runtime-main.js.map": "/react-text-ideas/static/js/runtime-main.dd15cebb.js.map",
     "static/css/2.800be05e.chunk.css": "/react-text-ideas/static/css/2.800be05e.chunk.css",
-    "static/js/2.19338e9a.chunk.js": "/react-text-ideas/static/js/2.19338e9a.chunk.js",
-    "static/js/2.19338e9a.chunk.js.map": "/react-text-ideas/static/js/2.19338e9a.chunk.js.map",
-    "static/js/3.81394b13.chunk.js": "/react-text-ideas/static/js/3.81394b13.chunk.js",
-    "static/js/3.81394b13.chunk.js.map": "/react-text-ideas/static/js/3.81394b13.chunk.js.map",
+    "static/js/2.faf391c0.chunk.js": "/react-text-ideas/static/js/2.faf391c0.chunk.js",
+    "static/js/2.faf391c0.chunk.js.map": "/react-text-ideas/static/js/2.faf391c0.chunk.js.map",
+    "static/js/3.6d132aca.chunk.js": "/react-text-ideas/static/js/3.6d132aca.chunk.js",
+    "static/js/3.6d132aca.chunk.js.map": "/react-text-ideas/static/js/3.6d132aca.chunk.js.map",
     "index.html": "/react-text-ideas/index.html",
     "static/css/2.800be05e.chunk.css.map": "/react-text-ideas/static/css/2.800be05e.chunk.css.map",
     "static/css/main.7a49feb5.chunk.css.map": "/react-text-ideas/static/css/main.7a49feb5.chunk.css.map",
-    "static/js/2.19338e9a.chunk.js.LICENSE.txt": "/react-text-ideas/static/js/2.19338e9a.chunk.js.LICENSE.txt",
+    "static/js/2.faf391c0.chunk.js.LICENSE.txt": "/react-text-ideas/static/js/2.faf391c0.chunk.js.LICENSE.txt",
     "static/media/index.css": "/react-text-ideas/static/media/iconfinder_arrow_icon.f5354c8e.svg",
     "static/media/whatsapp.0f74af52.png": "/react-text-ideas/static/media/whatsapp.0f74af52.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4e4e9a5f.js",
+    "static/js/runtime-main.dd15cebb.js",
     "static/css/2.800be05e.chunk.css",
-    "static/js/2.19338e9a.chunk.js",
+    "static/js/2.faf391c0.chunk.js",
     "static/css/main.7a49feb5.chunk.css",
-    "static/js/main.0617157c.chunk.js"
+    "static/js/main.cf18c693.chunk.js"
   ]
 }
