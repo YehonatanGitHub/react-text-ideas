@@ -186,13 +186,17 @@ body {
 }
 
 .form-control-check {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
 }
 
 .form-control-check label {
   flex: 1;
+  margin-bottom: 12px;
+}
+.form-control.form-control-check {
+  margin-bottom: 74px;
 }
 
 .form-control-check input {
@@ -234,7 +238,7 @@ input[type='text']:focus,
 }
 input#submit-btn {
   background-color: green;
-  width: 109px;
+  width: 125px;
   margin: 11px;
   color: #ffffff;
 }
